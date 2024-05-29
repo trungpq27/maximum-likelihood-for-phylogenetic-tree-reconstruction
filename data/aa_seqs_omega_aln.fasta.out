@@ -1,0 +1,177 @@
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7
+
+Input data:
+  MSA:        data/aa_seqs_omega_aln.fasta
+  Tree:       Maximum parsimony
+    file:           -
+  #taxa:            16
+  #sites:           45694
+  #patterns:        16193
+  Max. thread mem:  585 MB
+
+Output:
+  Log:           data/aa_seqs_omega_aln.fasta.log
+  Starting tree: data/aa_seqs_omega_aln.fasta.tree
+  Results:       data/aa_seqs_omega_aln.fasta.out
+
+Selection options:
+  # protein matrices: 19
+  # protein models:   152
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: false
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          16/8
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  VT+G4+F           20   -326719.7971    653965.3506         0.0000    1.0000
+       2  VT+I+G4+F         21   -326801.9876    654140.4613       175.1107    0.0000
+       3  PMB+G4+F          20   -327274.0396    655073.8356      1108.4849    0.0000
+       4  PMB+I+G4+F        21   -327361.1187    655258.7235      1293.3728    0.0000
+       5  BLOSUM62+G4+F     20   -327536.2577    655598.2717      1632.9211    0.0000
+       6  BLOSUM62+I+G4+F   21   -327621.2108    655778.9077      1813.5571    0.0000
+       7  VT+G4              1   -327984.5793    656291.0502      2325.6996    0.0000
+       8  WAG+G4+F          20   -327944.5585    656414.8734      2449.5228    0.0000
+       9  VT+I+G4            2   -328066.7675    656466.1565      2500.8058    0.0000
+      10  WAG+I+G4+F        21   -328020.1628    656576.8118      2611.4611    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              VT+G4+F
+lnL:                -326719.7971
+Frequencies:        0.0699 0.0415 0.0533 0.0621 0.0137 0.0344 0.0681 0.0643 0.0200 0.0608 0.0790 0.0801 0.0287 0.0421 0.0295 0.0646 0.0621 0.0117 0.0435 0.0705
+Inv. sites prop:    -
+Gamma shape:        1.0977
+Score:              653965.3506
+Weight:             1.0000
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              1.0000
+Gamma-Inv:          0.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              1.0977
+Alpha-P.Inv:        1.1519
+P.Inv-Alpha:        0.0216
+Frequencies:        0.0699 0.0415 0.0533 0.0621 0.0137 0.0344 0.0681 0.0643 0.0200 0.0608 0.0790 0.0801 0.0287 0.0421 0.0295 0.0646 0.0621 0.0117 0.0435 0.0705 
+
+Commands:
+  > phyml  -i data/aa_seqs_omega_aln.fasta -d aa -m VT -f e -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s data/aa_seqs_omega_aln.fasta -m PROTGAMMAVTF -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa data/aa_seqs_omega_aln.fasta --model VT+G4+F
+  > paup -s data/aa_seqs_omega_aln.fasta
+  > iqtree -s data/aa_seqs_omega_aln.fasta -m VT+G4+F
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  VT+G4+F           20   -326719.7971    653537.5942         0.0000    1.0000
+       2  VT+I+G4+F         21   -326801.9876    653703.9752       166.3809    0.0000
+       3  PMB+G4+F          20   -327274.0396    654646.0792      1108.4849    0.0000
+       4  PMB+I+G4+F        21   -327361.1187    654822.2373      1284.6431    0.0000
+       5  BLOSUM62+G4+F     20   -327536.2577    655170.5153      1632.9211    0.0000
+       6  BLOSUM62+I+G4+F   21   -327621.2108    655342.4216      1804.8274    0.0000
+       7  WAG+G4+F          20   -327944.5585    655987.1170      2449.5228    0.0000
+       8  VT+G4              1   -327984.5793    656029.1586      2491.5643    0.0000
+       9  WAG+I+G4+F        21   -328020.1628    656140.3256      2602.7314    0.0000
+      10  VT+I+G4            2   -328066.7675    656195.5351      2657.9408    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              VT+G4+F
+lnL:                -326719.7971
+Frequencies:        0.0699 0.0415 0.0533 0.0621 0.0137 0.0344 0.0681 0.0643 0.0200 0.0608 0.0790 0.0801 0.0287 0.0421 0.0295 0.0646 0.0621 0.0117 0.0435 0.0705
+Inv. sites prop:    -
+Gamma shape:        1.0977
+Score:              653537.5942
+Weight:             1.0000
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              1.0000
+Gamma-Inv:          0.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              1.0977
+Alpha-P.Inv:        1.1519
+P.Inv-Alpha:        0.0216
+Frequencies:        0.0699 0.0415 0.0533 0.0621 0.0137 0.0344 0.0681 0.0643 0.0200 0.0608 0.0790 0.0801 0.0287 0.0421 0.0295 0.0646 0.0621 0.0117 0.0435 0.0705 
+
+Commands:
+  > phyml  -i data/aa_seqs_omega_aln.fasta -d aa -m VT -f e -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s data/aa_seqs_omega_aln.fasta -m PROTGAMMAVTF -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa data/aa_seqs_omega_aln.fasta --model VT+G4+F
+  > paup -s data/aa_seqs_omega_aln.fasta
+  > iqtree -s data/aa_seqs_omega_aln.fasta -m VT+G4+F
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  VT+G4+F           20   -326719.7971    653537.5942         0.0000    1.0000
+       2  VT+I+G4+F         21   -326801.9876    653703.9752       166.3809    0.0000
+       3  PMB+G4+F          20   -327274.0396    654646.0792      1108.4849    0.0000
+       4  PMB+I+G4+F        21   -327361.1187    654822.2373      1284.6431    0.0000
+       5  BLOSUM62+G4+F     20   -327536.2577    655170.5153      1632.9211    0.0000
+       6  BLOSUM62+I+G4+F   21   -327621.2108    655342.4216      1804.8274    0.0000
+       7  WAG+G4+F          20   -327944.5585    655987.1170      2449.5228    0.0000
+       8  VT+G4              1   -327984.5793    656029.1586      2491.5643    0.0000
+       9  WAG+I+G4+F        21   -328020.1628    656140.3256      2602.7314    0.0000
+      10  VT+I+G4            2   -328066.7675    656195.5351      2657.9408    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              VT+G4+F
+lnL:                -326719.7971
+Frequencies:        0.0699 0.0415 0.0533 0.0621 0.0137 0.0344 0.0681 0.0643 0.0200 0.0608 0.0790 0.0801 0.0287 0.0421 0.0295 0.0646 0.0621 0.0117 0.0435 0.0705
+Inv. sites prop:    -
+Gamma shape:        1.0977
+Score:              653537.5942
+Weight:             1.0000
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              1.0000
+Gamma-Inv:          0.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              1.0977
+Alpha-P.Inv:        1.1519
+P.Inv-Alpha:        0.0216
+Frequencies:        0.0699 0.0415 0.0533 0.0621 0.0137 0.0344 0.0681 0.0643 0.0200 0.0608 0.0790 0.0801 0.0287 0.0421 0.0295 0.0646 0.0621 0.0117 0.0435 0.0705 
+
+Commands:
+  > phyml  -i data/aa_seqs_omega_aln.fasta -d aa -m VT -f e -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s data/aa_seqs_omega_aln.fasta -m PROTGAMMAVTF -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa data/aa_seqs_omega_aln.fasta --model VT+G4+F
+  > paup -s data/aa_seqs_omega_aln.fasta
+  > iqtree -s data/aa_seqs_omega_aln.fasta -m VT+G4+F
+Done

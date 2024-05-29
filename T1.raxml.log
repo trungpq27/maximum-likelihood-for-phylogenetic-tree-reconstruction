@@ -1,0 +1,1372 @@
+
+RAxML-NG v. 1.2.2-master released on 30.04.2024 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth, Julia Haag, Anastasis Togkousidis.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Intel(R) Xeon(R) Gold 5220 CPU @ 2.20GHz, 32 cores, 31 GB RAM (allocated: 16 physical cores)
+
+RAxML-NG was called at 09-May-2024 12:49:45 as follows:
+
+./bin/raxml-ng --msa data/aa_seqs_omega_aln.fasta --model VT+G4+F --prefix T1 --threads 30 --log debug
+
+Analysis options:
+  run mode: ML tree search
+  start tree(s): random (10) + parsimony (10)
+  random seed: 1715258985
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  logLH epsilon: general: 10.000000, brlen-triplet: 1000.000000
+  fast spr radius: AUTO
+  spr subtree cutoff: 1.000000
+  fast CLV updates: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX2
+  parallelization: coarse-grained (auto), PTHREADS (30 threads), thread pinning: OFF
+
+RBA partial loading: OFF
+|noname|   |VT+FC+G4m|   ||
+[00:00:00] Reading alignment from file: data/aa_seqs_omega_aln.fasta
+Failed to load as IPHYLIP: Unable to parse PHYLIP file: data/aa_seqs_omega_aln.fasta
+ (LIBPLL-231): Invalid number of sequences in header
+Failed to load as PHYLIP: Unable to parse PHYLIP file: data/aa_seqs_omega_aln.fasta
+ (LIBPLL-231): Invalid number of sequences in header
+[00:00:00] Loaded alignment with 16 taxa and 45694 sites
+[00:00:00] Extracting partitions... 
+[00:00:00] Checking the alignment...
+[00:00:00] Compressing alignment patterns... 
+
+Alignment comprises 1 partitions and 16193 patterns
+
+Partition 0: noname
+Model: VT+FC+G4m
+Alignment sites / patterns: 45694 / 16193
+Gaps: 43.84 %
+Invariant sites: 43.59 %
+
+
+NOTE: Binary MSA file created: T1.raxml.rba
+
+Recommended threads (response/balanced/throughput): 51 / 19 / 8
+
+Parallelization scheme autoconfig: 3 worker(s) x 10 thread(s)
+
+[00:00:00] Generating a RANDOM starting tree, seed: 1668563809
+[00:00:00] Generating 10 random starting tree(s) with 16 taxa
+[00:00:00] Generating a RANDOM starting tree, seed: 1171420828
+[00:00:00] Generating a RANDOM starting tree, seed: 1557319054
+[00:00:00] Generating a RANDOM starting tree, seed: 500186271
+[00:00:00] Generating a RANDOM starting tree, seed: 166670696
+[00:00:00] Generating a RANDOM starting tree, seed: 165731149
+[00:00:00] Generating a RANDOM starting tree, seed: 1015963883
+[00:00:00] Generating a RANDOM starting tree, seed: 785523831
+[00:00:00] Generating a RANDOM starting tree, seed: 2002745881
+[00:00:00] Generating a RANDOM starting tree, seed: 1712795502
+[00:00:00] Generating a RANDOM starting tree, seed: 1985011284
+[00:00:00] Generating 10 parsimony starting tree(s) with 16 taxa
+Estimated memory per parsimony thread: 2 MB
+Parallel parsimony with 30 threads
+[00:00:00] [worker #0] Generated a PARSIMONY starting tree, seed: 1408032635, score: 48343
+[00:00:00] [worker #1] Generated a PARSIMONY starting tree, seed: 260603515, score: 48276
+[00:00:00] [worker #3] Generated a PARSIMONY starting tree, seed: 2096470190, score: 48221
+[00:00:00] [worker #8] Generated a PARSIMONY starting tree, seed: 610491290, score: 48337
+[00:00:00] [worker #4] Generated a PARSIMONY starting tree, seed: 816311260, score: 48397
+[00:00:00] [worker #6] Generated a PARSIMONY starting tree, seed: 1723763545, score: 48272
+[00:00:00] [worker #2] Generated a PARSIMONY starting tree, seed: 1443985538, score: 48273
+[00:00:00] [worker #9] Generated a PARSIMONY starting tree, seed: 664199589, score: 48353
+[00:00:00] [worker #7] Generated a PARSIMONY starting tree, seed: 179988957, score: 48255
+[00:00:00] [worker #5] Generated a PARSIMONY starting tree, seed: 1178422499, score: 48341
+Parallel reduction/worker buffer size: 1 KB  / 0 KB
+
+
+Initial model parameters:
+   Partition: noname
+   Rate heterogeneity: GAMMA (4 cats, mean),  alpha: 1.000000 (ML),  weights&rates: (0.250000,0.136954) (0.250000,0.476752) (0.250000,1.000000) (0.250000,2.386294) 
+   Base frequencies (empirical): 0.069903 0.041490 0.053331 0.062141 0.013727 0.034410 0.068079 0.064311 0.020047 0.060830 0.079044 0.080115 0.028674 0.042072 0.029529 0.064576 0.062051 0.011735 0.043487 0.070451 
+   Substitution rates (model): 1.241269 1.218424 1.375937 2.473122 2.215517 2.337991 3.338656 0.961584 0.890820 1.077850 1.493206 1.900646 0.688344 2.735562 6.420896 5.289251 0.548858 0.541177 4.650189 1.572077 0.755065 1.441426 5.512082 1.354240 1.312170 4.923867 0.432301 0.838670 10.017331 1.248864 0.422495 1.309184 1.920299 1.336340 1.517014 0.891261 0.780702 7.858422 0.978468 3.014320 2.009343 2.411763 6.197438 0.917929 0.409831 4.403455 0.937880 0.504494 0.710372 6.123451 3.885251 0.180853 1.089493 0.458606 0.227249 1.656250 9.688345 1.914208 2.145964 0.216166 0.357421 1.452179 0.407524 0.167513 1.071461 2.216194 1.506684 0.249658 0.744762 0.459454 0.458747 0.451917 1.103461 1.519676 0.912667 1.408132 0.337109 1.221305 1.695395 0.432623 3.636682 1.755707 1.627518 2.157978 2.262746 6.812460 0.877611 7.994323 0.488273 1.331810 6.051909 1.910619 0.357343 2.301918 2.319370 2.157651 0.895908 0.918360 0.636693 1.386012 1.636008 0.403550 0.561072 4.329009 0.747194 0.231719 1.513281 1.827354 1.583998 0.419839 0.581811 0.894057 0.856125 0.288808 0.357866 0.894556 0.595481 0.369372 0.774493 3.063778 0.714749 0.934975 0.337447 0.619332 0.578794 1.076501 1.808514 1.380829 1.362977 1.837056 1.969990 1.613665 0.630195 7.758744 0.533322 6.001911 0.624430 6.759790 2.286429 0.481140 0.604749 2.634478 0.560465 0.862680 14.872933 0.564232 8.032779 4.361155 1.008432 0.895375 1.019200 1.518311 1.245224 3.545809 1.712967 0.391056 1.391894 1.977663 2.551378 0.585192 0.783545 0.780108 2.320137 0.495319 1.065748 3.362849 1.468048 1.089917 4.058458 0.374682 1.107914 0.688273 3.344844 10.384852 1.703973 3.546591 1.948538 0.432606 0.481911 0.598550 8.847998 0.679113 0.954723 0.930523 0.451420 0.856431 3.424222 4.537724 0.565897 1.000000 
+
+[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 1620 / 129600
+
+thread#	part#	start	length	weight
+0	0	14580	1613	129040
+
+1	0	12960	1620	129600
+
+2	0	11340	1620	129600
+
+3	0	9720	1620	129600
+
+4	0	8100	1620	129600
+
+5	0	6480	1620	129600
+
+6	0	4860	1620	129600
+
+7	0	3240	1620	129600
+
+8	0	1620	1620	129600
+
+9	0	0	1620	129600
+
+[00:00:00] Data distribution: max. searches per worker: 7
+
+BARRIER time: 0.064263 ms
+
+Starting ML tree search with 20 distinct starting trees
+
+[00:00:00 -747807.569749] Initial branch length optimization
+	 - after brlen: logLH = -549870.932808
+[00:00:02 -549870.932808] Model parameter optimization (eps = 10.000000)
+	 - after rates: logLH = -549870.932808
+	 - after freqs: logLH = -549870.932808
+	 - after alpha: logLH = -543938.438348
+	 - after p-inv: logLH = -543938.438348
+	 - after freeR: logLH = -543938.438348
+	 - after brlen: logLH = -539667.676079
+Iteration 1: logLH = -539667.676079
+	 - after rates: logLH = -539667.676079
+	 - after freqs: logLH = -539667.676079
+	 - after alpha: logLH = -538971.500672
+	 - after p-inv: logLH = -538971.500672
+	 - after freeR: logLH = -538971.500672
+	 - after brlen: logLH = -538300.656378
+Iteration 2: logLH = -538300.656378
+	 - after rates: logLH = -538300.656378
+	 - after freqs: logLH = -538300.656378
+	 - after alpha: logLH = -537912.558102
+	 - after p-inv: logLH = -537912.558102
+	 - after freeR: logLH = -537912.558102
+	 - after brlen: logLH = -537545.555869
+Iteration 3: logLH = -537545.555869
+	 - after rates: logLH = -537545.555869
+	 - after freqs: logLH = -537545.555869
+	 - after alpha: logLH = -537316.301459
+	 - after p-inv: logLH = -537316.301459
+	 - after freeR: logLH = -537316.301459
+	 - after brlen: logLH = -537089.918819
+Iteration 4: logLH = -537089.918819
+	 - after rates: logLH = -537089.918819
+	 - after freqs: logLH = -537089.918819
+	 - after alpha: logLH = -536934.747681
+	 - after p-inv: logLH = -536934.747681
+	 - after freeR: logLH = -536934.747681
+	 - after brlen: logLH = -536781.847978
+Iteration 5: logLH = -536781.847978
+	 - after rates: logLH = -536781.847978
+	 - after freqs: logLH = -536781.847978
+	 - after alpha: logLH = -536672.210649
+	 - after p-inv: logLH = -536672.210649
+	 - after freeR: logLH = -536672.210649
+	 - after brlen: logLH = -536564.572181
+Iteration 6: logLH = -536564.572181
+	 - after rates: logLH = -536564.572181
+	 - after freqs: logLH = -536564.572181
+	 - after alpha: logLH = -536484.424095
+	 - after p-inv: logLH = -536484.424095
+	 - after freeR: logLH = -536484.424095
+	 - after brlen: logLH = -536407.142802
+Iteration 7: logLH = -536407.142802
+	 - after rates: logLH = -536407.142802
+	 - after freqs: logLH = -536407.142802
+	 - after alpha: logLH = -536355.284403
+	 - after p-inv: logLH = -536355.284403
+	 - after freeR: logLH = -536355.284403
+	 - after brlen: logLH = -536295.885697
+Iteration 8: logLH = -536295.885697
+	 - after rates: logLH = -536295.885697
+	 - after freqs: logLH = -536295.885697
+	 - after alpha: logLH = -536255.548367
+	 - after p-inv: logLH = -536255.548367
+	 - after freeR: logLH = -536255.548367
+	 - after brlen: logLH = -536209.576389
+Iteration 9: logLH = -536209.576389
+	 - after rates: logLH = -536209.576389
+	 - after freqs: logLH = -536209.576389
+	 - after alpha: logLH = -536177.722450
+	 - after p-inv: logLH = -536177.722450
+	 - after freeR: logLH = -536177.722450
+	 - after brlen: logLH = -536141.539194
+Iteration 10: logLH = -536141.539194
+	 - after rates: logLH = -536141.539194
+	 - after freqs: logLH = -536141.539194
+	 - after alpha: logLH = -536116.160714
+	 - after p-inv: logLH = -536116.160714
+	 - after freeR: logLH = -536116.160714
+	 - after brlen: logLH = -536087.431907
+Iteration 11: logLH = -536087.431907
+	 - after rates: logLH = -536087.431907
+	 - after freqs: logLH = -536087.431907
+	 - after alpha: logLH = -536067.054083
+	 - after p-inv: logLH = -536067.054083
+	 - after freeR: logLH = -536067.054083
+	 - after brlen: logLH = -536044.465738
+Iteration 12: logLH = -536044.465738
+	 - after rates: logLH = -536044.465738
+	 - after freqs: logLH = -536044.465738
+	 - after alpha: logLH = -536027.912867
+	 - after p-inv: logLH = -536027.912867
+	 - after freeR: logLH = -536027.912867
+	 - after brlen: logLH = -536009.312199
+Iteration 13: logLH = -536009.312199
+	 - after rates: logLH = -536009.312199
+	 - after freqs: logLH = -536009.312199
+	 - after alpha: logLH = -535995.895340
+	 - after p-inv: logLH = -535995.895340
+	 - after freeR: logLH = -535995.895340
+	 - after brlen: logLH = -535980.791632
+Iteration 14: logLH = -535980.791632
+	 - after rates: logLH = -535980.791632
+	 - after freqs: logLH = -535980.791632
+	 - after alpha: logLH = -535969.837857
+	 - after p-inv: logLH = -535969.837857
+	 - after freeR: logLH = -535969.837857
+	 - after brlen: logLH = -535957.508139
+Iteration 15: logLH = -535957.508139
+	 - after rates: logLH = -535957.508139
+	 - after freqs: logLH = -535957.508139
+	 - after alpha: logLH = -535948.528658
+	 - after p-inv: logLH = -535948.528658
+	 - after freeR: logLH = -535948.528658
+	 - after brlen: logLH = -535939.563562
+Iteration 16: logLH = -535939.563562
+	 - after rates: logLH = -535939.563562
+	 - after freqs: logLH = -535939.563562
+	 - after alpha: logLH = -535935.247486
+	 - after p-inv: logLH = -535935.247486
+	 - after freeR: logLH = -535935.247486
+	 - after brlen: logLH = -535927.265967
+Iteration 17: logLH = -535927.265967
+	 - after rates: logLH = -535927.265967
+	 - after freqs: logLH = -535927.265967
+	 - after alpha: logLH = -535923.569156
+	 - after p-inv: logLH = -535923.569156
+	 - after freeR: logLH = -535923.569156
+	 - after brlen: logLH = -535916.621395
+Iteration 18: logLH = -535916.621395
+	 - after rates: logLH = -535916.621395
+	 - after freqs: logLH = -535916.621395
+	 - after alpha: logLH = -535913.429827
+	 - after p-inv: logLH = -535913.429827
+	 - after freeR: logLH = -535913.429827
+	 - after brlen: logLH = -535907.395842
+Iteration 19: logLH = -535907.395842
+[00:00:18 -535907.395842] AUTODETECT spr round 1 (radius: 5)
+[00:00:26 -375769.412234] AUTODETECT spr round 2 (radius: 10)
+[00:00:28 -375766.720852] AUTODETECT spr round 3 (radius: 15)
+[00:00:29 -375765.020825] SPR radius for FAST iterations: 15 (autodetect)
+[00:00:29 -375765.020825] Model parameter optimization (eps = 3.000000)
+	 - after rates: logLH = -375765.020825
+	 - after freqs: logLH = -375765.020825
+	 - after alpha: logLH = -372162.799488
+	 - after p-inv: logLH = -372162.799488
+	 - after freeR: logLH = -372162.799488
+	 - after brlen: logLH = -372087.297665
+Iteration 1: logLH = -372087.297665
+	 - after rates: logLH = -372087.297665
+	 - after freqs: logLH = -372087.297665
+	 - after alpha: logLH = -372086.594919
+	 - after p-inv: logLH = -372086.594919
+	 - after freeR: logLH = -372086.594919
+	 - after brlen: logLH = -372085.787657
+Iteration 2: logLH = -372085.787657
+[00:00:31 -372085.787657] FAST spr round 1 (radius: 15)
+	 - after brlen: logLH = -325631.314362
+[00:00:48 -325631.314362] FAST spr round 2 (radius: 15)
+	 - after brlen: logLH = -325494.629972
+[00:01:01 -325494.629972] FAST spr round 3 (radius: 15)
+	 - after brlen: logLH = -325494.628959
+[00:01:12 -325494.628959] Model parameter optimization (eps = 1.000000)
+	 - after rates: logLH = -325494.628959
+	 - after freqs: logLH = -325494.628959
+	 - after alpha: logLH = -325205.116651
+	 - after p-inv: logLH = -325205.116651
+	 - after freeR: logLH = -325205.116651
+	 - after brlen: logLH = -325197.992834
+Iteration 1: logLH = -325197.992834
+	 - after rates: logLH = -325197.992834
+	 - after freqs: logLH = -325197.992834
+	 - after alpha: logLH = -325197.875031
+	 - after p-inv: logLH = -325197.875031
+	 - after freeR: logLH = -325197.875031
+	 - after brlen: logLH = -325197.849409
+Iteration 2: logLH = -325197.849409
+[00:01:14 -325197.849409] SLOW spr round 1 (radius: 5)
+[00:01:30] [worker #1] ML tree search #2, logLikelihood: -325197.977784
+	 - after brlen: logLH = -325197.848100
+[00:01:36 -325197.848100] SLOW spr round 2 (radius: 10)
+	 - after brlen: logLH = -325197.847723
+[00:01:51 -325197.847723] SLOW spr round 3 (radius: 15)
+	 - after brlen: logLH = -325197.847339
+[00:01:52 -325197.847339] Model parameter optimization (eps = 0.100000)
+	 - after rates: logLH = -325197.847339
+	 - after freqs: logLH = -325197.847339
+	 - after alpha: logLH = -325197.847339
+	 - after p-inv: logLH = -325197.847339
+	 - after freeR: logLH = -325197.847339
+	 - after brlen: logLH = -325197.847147
+Iteration 1: logLH = -325197.847147
+
+[00:01:52] [worker #0] ML tree search #1, logLikelihood: -325197.847147
+
+[00:01:53 -675247.816401] Initial branch length optimization
+	 - after brlen: logLH = -510857.345311
+[00:01:54 -510857.345311] Model parameter optimization (eps = 10.000000)
+	 - after rates: logLH = -510857.345311
+	 - after freqs: logLH = -510857.345311
+	 - after alpha: logLH = -505881.779175
+	 - after p-inv: logLH = -505881.779175
+	 - after freeR: logLH = -505881.779175
+	 - after brlen: logLH = -502254.662666
+Iteration 1: logLH = -502254.662666
+	 - after rates: logLH = -502254.662666
+	 - after freqs: logLH = -502254.662666
+	 - after alpha: logLH = -501339.544452
+	 - after p-inv: logLH = -501339.544452
+	 - after freeR: logLH = -501339.544452
+	 - after brlen: logLH = -500433.524217
+Iteration 2: logLH = -500433.524217
+	 - after rates: logLH = -500433.524217
+	 - after freqs: logLH = -500433.524217
+	 - after alpha: logLH = -499965.309702
+	 - after p-inv: logLH = -499965.309702
+	 - after freeR: logLH = -499965.309702
+	 - after brlen: logLH = -499515.834796
+Iteration 3: logLH = -499515.834796
+	 - after rates: logLH = -499515.834796
+	 - after freqs: logLH = -499515.834796
+	 - after alpha: logLH = -499250.895125
+	 - after p-inv: logLH = -499250.895125
+	 - after freeR: logLH = -499250.895125
+	 - after brlen: logLH = -498984.582053
+Iteration 4: logLH = -498984.582053
+	 - after rates: logLH = -498984.582053
+	 - after freqs: logLH = -498984.582053
+	 - after alpha: logLH = -498810.332599
+	 - after p-inv: logLH = -498810.332599
+	 - after freeR: logLH = -498810.332599
+	 - after brlen: logLH = -498637.569778
+Iteration 5: logLH = -498637.569778
+	 - after rates: logLH = -498637.569778
+	 - after freqs: logLH = -498637.569778
+	 - after alpha: logLH = -498515.820746
+	 - after p-inv: logLH = -498515.820746
+	 - after freeR: logLH = -498515.820746
+	 - after brlen: logLH = -498395.896882
+Iteration 6: logLH = -498395.896882
+	 - after rates: logLH = -498395.896882
+	 - after freqs: logLH = -498395.896882
+	 - after alpha: logLH = -498307.365667
+	 - after p-inv: logLH = -498307.365667
+	 - after freeR: logLH = -498307.365667
+	 - after brlen: logLH = -498221.685579
+Iteration 7: logLH = -498221.685579
+	 - after rates: logLH = -498221.685579
+	 - after freqs: logLH = -498221.685579
+	 - after alpha: logLH = -498163.639809
+	 - after p-inv: logLH = -498163.639809
+	 - after freeR: logLH = -498163.639809
+	 - after brlen: logLH = -498098.389081
+Iteration 8: logLH = -498098.389081
+	 - after rates: logLH = -498098.389081
+	 - after freqs: logLH = -498098.389081
+	 - after alpha: logLH = -498053.514923
+	 - after p-inv: logLH = -498053.514923
+	 - after freeR: logLH = -498053.514923
+	 - after brlen: logLH = -498003.582186
+Iteration 9: logLH = -498003.582186
+	 - after rates: logLH = -498003.582186
+	 - after freqs: logLH = -498003.582186
+	 - after alpha: logLH = -497968.312649
+	 - after p-inv: logLH = -497968.312649
+	 - after freeR: logLH = -497968.312649
+	 - after brlen: logLH = -497928.122248
+Iteration 10: logLH = -497928.122248
+	 - after rates: logLH = -497928.122248
+	 - after freqs: logLH = -497928.122248
+	 - after alpha: logLH = -497900.400026
+	 - after p-inv: logLH = -497900.400026
+	 - after freeR: logLH = -497900.400026
+	 - after brlen: logLH = -497869.660043
+Iteration 11: logLH = -497869.660043
+	 - after rates: logLH = -497869.660043
+	 - after freqs: logLH = -497869.660043
+	 - after alpha: logLH = -497847.489669
+	 - after p-inv: logLH = -497847.489669
+	 - after freeR: logLH = -497847.489669
+	 - after brlen: logLH = -497823.101885
+Iteration 12: logLH = -497823.101885
+	 - after rates: logLH = -497823.101885
+	 - after freqs: logLH = -497823.101885
+	 - after alpha: logLH = -497805.331873
+	 - after p-inv: logLH = -497805.331873
+	 - after freeR: logLH = -497805.331873
+	 - after brlen: logLH = -497785.857317
+Iteration 13: logLH = -497785.857317
+	 - after rates: logLH = -497785.857317
+	 - after freqs: logLH = -497785.857317
+	 - after alpha: logLH = -497771.548897
+	 - after p-inv: logLH = -497771.548897
+	 - after freeR: logLH = -497771.548897
+	 - after brlen: logLH = -497755.901933
+Iteration 14: logLH = -497755.901933
+	 - after rates: logLH = -497755.901933
+	 - after freqs: logLH = -497755.901933
+	 - after alpha: logLH = -497744.336256
+	 - after p-inv: logLH = -497744.336256
+	 - after freeR: logLH = -497744.336256
+	 - after brlen: logLH = -497731.704800
+Iteration 15: logLH = -497731.704800
+	 - after rates: logLH = -497731.704800
+	 - after freqs: logLH = -497731.704800
+	 - after alpha: logLH = -497722.323740
+	 - after p-inv: logLH = -497722.323740
+	 - after freeR: logLH = -497722.323740
+	 - after brlen: logLH = -497713.128354
+Iteration 16: logLH = -497713.128354
+	 - after rates: logLH = -497713.128354
+	 - after freqs: logLH = -497713.128354
+[00:02:10] [worker #2] ML tree search #3, logLikelihood: -325197.932083
+	 - after alpha: logLH = -497708.560700
+	 - after p-inv: logLH = -497708.560700
+	 - after freeR: logLH = -497708.560700
+	 - after brlen: logLH = -497700.486283
+Iteration 17: logLH = -497700.486283
+	 - after rates: logLH = -497700.486283
+	 - after freqs: logLH = -497700.486283
+	 - after alpha: logLH = -497696.603625
+	 - after p-inv: logLH = -497696.603625
+	 - after freeR: logLH = -497696.603625
+	 - after brlen: logLH = -497689.661020
+Iteration 18: logLH = -497689.661020
+	 - after rates: logLH = -497689.661020
+	 - after freqs: logLH = -497689.661020
+	 - after alpha: logLH = -497686.348998
+	 - after p-inv: logLH = -497686.348998
+	 - after freeR: logLH = -497686.348998
+	 - after brlen: logLH = -497680.381488
+Iteration 19: logLH = -497680.381488
+[00:02:12 -497680.381488] AUTODETECT spr round 1 (radius: 5)
+[00:02:18 -356397.155295] AUTODETECT spr round 2 (radius: 10)
+[00:02:20 -356397.068235] SPR radius for FAST iterations: 5 (autodetect)
+[00:02:20 -356397.068235] Model parameter optimization (eps = 3.000000)
+	 - after rates: logLH = -356397.068235
+	 - after freqs: logLH = -356397.068235
+	 - after alpha: logLH = -355827.055104
+	 - after p-inv: logLH = -355827.055104
+	 - after freeR: logLH = -355827.055104
+	 - after brlen: logLH = -325387.894360
+Iteration 1: logLH = -325387.894360
+	 - after rates: logLH = -325387.894360
+	 - after freqs: logLH = -325387.894360
+	 - after alpha: logLH = -325314.344676
+	 - after p-inv: logLH = -325314.344676
+	 - after freeR: logLH = -325314.344676
+	 - after brlen: logLH = -325313.227128
+Iteration 2: logLH = -325313.227128
+	 - after rates: logLH = -325313.227128
+	 - after freqs: logLH = -325313.227128
+	 - after alpha: logLH = -325313.224043
+	 - after p-inv: logLH = -325313.224043
+	 - after freeR: logLH = -325313.224043
+	 - after brlen: logLH = -325313.116531
+Iteration 3: logLH = -325313.116531
+[00:02:21 -325313.116531] FAST spr round 1 (radius: 5)
+	 - after brlen: logLH = -325312.764770
+[00:02:31 -325312.764770] Model parameter optimization (eps = 1.000000)
+	 - after rates: logLH = -325312.764770
+	 - after freqs: logLH = -325312.764770
+	 - after alpha: logLH = -325312.764770
+	 - after p-inv: logLH = -325312.764770
+	 - after freeR: logLH = -325312.764770
+	 - after brlen: logLH = -325312.763904
+Iteration 1: logLH = -325312.763904
+[00:02:32 -325312.763904] SLOW spr round 1 (radius: 5)
+	 - after brlen: logLH = -325242.406863
+[00:02:56 -325242.406863] SLOW spr round 2 (radius: 5)
+	 - after brlen: logLH = -325197.941604
+[00:03:17 -325197.941604] SLOW spr round 3 (radius: 5)
+[00:03:34] [worker #1] ML tree search #5, logLikelihood: -325197.991228
+	 - after brlen: logLH = -325197.940693
+[00:03:39 -325197.940693] SLOW spr round 4 (radius: 10)
+	 - after brlen: logLH = -325197.939937
+[00:03:57 -325197.939937] SLOW spr round 5 (radius: 15)
+	 - after brlen: logLH = -325197.939182
+[00:03:57 -325197.939182] Model parameter optimization (eps = 0.100000)
+	 - after rates: logLH = -325197.939182
+	 - after freqs: logLH = -325197.939182
+	 - after alpha: logLH = -325197.939182
+	 - after p-inv: logLH = -325197.939182
+	 - after freeR: logLH = -325197.939182
+	 - after brlen: logLH = -325197.938805
+Iteration 1: logLH = -325197.938805
+
+[00:03:58] [worker #0] ML tree search #4, logLikelihood: -325197.938805
+
+[00:03:58 -603045.276654] Initial branch length optimization
+	 - after brlen: logLH = -469311.662934
+[00:03:59 -469311.662934] Model parameter optimization (eps = 10.000000)
+	 - after rates: logLH = -469311.662934
+	 - after freqs: logLH = -469311.662934
+	 - after alpha: logLH = -465922.702554
+	 - after p-inv: logLH = -465922.702554
+	 - after freeR: logLH = -465922.702554
+	 - after brlen: logLH = -463498.736411
+Iteration 1: logLH = -463498.736411
+	 - after rates: logLH = -463498.736411
+	 - after freqs: logLH = -463498.736411
+	 - after alpha: logLH = -462615.681762
+	 - after p-inv: logLH = -462615.681762
+	 - after freeR: logLH = -462615.681762
+	 - after brlen: logLH = -461750.734803
+Iteration 2: logLH = -461750.734803
+	 - after rates: logLH = -461750.734803
+	 - after freqs: logLH = -461750.734803
+	 - after alpha: logLH = -461313.789231
+	 - after p-inv: logLH = -461313.789231
+	 - after freeR: logLH = -461313.789231
+	 - after brlen: logLH = -460899.037953
+Iteration 3: logLH = -460899.037953
+	 - after rates: logLH = -460899.037953
+	 - after freqs: logLH = -460899.037953
+	 - after alpha: logLH = -460659.546968
+	 - after p-inv: logLH = -460659.546968
+	 - after freeR: logLH = -460659.546968
+[00:04:03] [worker #2] ML tree search #6, logLikelihood: -325198.097266
+	 - after brlen: logLH = -460420.926143
+Iteration 4: logLH = -460420.926143
+	 - after rates: logLH = -460420.926143
+	 - after freqs: logLH = -460420.926143
+	 - after alpha: logLH = -460264.118101
+	 - after p-inv: logLH = -460264.118101
+	 - after freeR: logLH = -460264.118101
+	 - after brlen: logLH = -460108.431094
+Iteration 5: logLH = -460108.431094
+	 - after rates: logLH = -460108.431094
+	 - after freqs: logLH = -460108.431094
+	 - after alpha: logLH = -459998.135108
+	 - after p-inv: logLH = -459998.135108
+	 - after freeR: logLH = -459998.135108
+	 - after brlen: logLH = -459889.348764
+Iteration 6: logLH = -459889.348764
+	 - after rates: logLH = -459889.348764
+	 - after freqs: logLH = -459889.348764
+	 - after alpha: logLH = -459808.017262
+	 - after p-inv: logLH = -459808.017262
+	 - after freeR: logLH = -459808.017262
+	 - after brlen: logLH = -459728.957466
+Iteration 7: logLH = -459728.957466
+	 - after rates: logLH = -459728.957466
+	 - after freqs: logLH = -459728.957466
+	 - after alpha: logLH = -459673.268035
+	 - after p-inv: logLH = -459673.268035
+	 - after freeR: logLH = -459673.268035
+	 - after brlen: logLH = -459612.253915
+Iteration 8: logLH = -459612.253915
+	 - after rates: logLH = -459612.253915
+	 - after freqs: logLH = -459612.253915
+	 - after alpha: logLH = -459568.506225
+	 - after p-inv: logLH = -459568.506225
+	 - after freeR: logLH = -459568.506225
+	 - after brlen: logLH = -459520.704866
+Iteration 9: logLH = -459520.704866
+	 - after rates: logLH = -459520.704866
+	 - after freqs: logLH = -459520.704866
+	 - after alpha: logLH = -459485.853726
+	 - after p-inv: logLH = -459485.853726
+	 - after freeR: logLH = -459485.853726
+	 - after brlen: logLH = -459447.911706
+Iteration 10: logLH = -459447.911706
+	 - after rates: logLH = -459447.911706
+	 - after freqs: logLH = -459447.911706
+	 - after alpha: logLH = -459419.928284
+	 - after p-inv: logLH = -459419.928284
+	 - after freeR: logLH = -459419.928284
+	 - after brlen: logLH = -459389.507911
+Iteration 11: logLH = -459389.507911
+	 - after rates: logLH = -459389.507911
+	 - after freqs: logLH = -459389.507911
+	 - after alpha: logLH = -459366.901817
+	 - after p-inv: logLH = -459366.901817
+	 - after freeR: logLH = -459366.901817
+	 - after brlen: logLH = -459343.077649
+Iteration 12: logLH = -459343.077649
+	 - after rates: logLH = -459343.077649
+	 - after freqs: logLH = -459343.077649
+	 - after alpha: logLH = -459324.600487
+	 - after p-inv: logLH = -459324.600487
+	 - after freeR: logLH = -459324.600487
+	 - after brlen: logLH = -459305.168777
+Iteration 13: logLH = -459305.168777
+	 - after rates: logLH = -459305.168777
+	 - after freqs: logLH = -459305.168777
+	 - after alpha: logLH = -459290.031745
+	 - after p-inv: logLH = -459290.031745
+	 - after freeR: logLH = -459290.031745
+	 - after brlen: logLH = -459274.259748
+Iteration 14: logLH = -459274.259748
+	 - after rates: logLH = -459274.259748
+	 - after freqs: logLH = -459274.259748
+	 - after alpha: logLH = -459261.816869
+	 - after p-inv: logLH = -459261.816869
+	 - after freeR: logLH = -459261.816869
+	 - after brlen: logLH = -459249.094693
+Iteration 15: logLH = -459249.094693
+	 - after rates: logLH = -459249.094693
+	 - after freqs: logLH = -459249.094693
+	 - after alpha: logLH = -459238.837324
+	 - after p-inv: logLH = -459238.837324
+	 - after freeR: logLH = -459238.837324
+	 - after brlen: logLH = -459229.151040
+Iteration 16: logLH = -459229.151040
+	 - after rates: logLH = -459229.151040
+	 - after freqs: logLH = -459229.151040
+	 - after alpha: logLH = -459223.560293
+	 - after p-inv: logLH = -459223.560293
+	 - after freeR: logLH = -459223.560293
+	 - after brlen: logLH = -459215.008075
+Iteration 17: logLH = -459215.008075
+	 - after rates: logLH = -459215.008075
+	 - after freqs: logLH = -459215.008075
+	 - after alpha: logLH = -459210.228942
+	 - after p-inv: logLH = -459210.228942
+	 - after freeR: logLH = -459210.228942
+	 - after brlen: logLH = -459202.856858
+Iteration 18: logLH = -459202.856858
+	 - after rates: logLH = -459202.856858
+	 - after freqs: logLH = -459202.856858
+	 - after alpha: logLH = -459198.753440
+	 - after p-inv: logLH = -459198.753440
+	 - after freeR: logLH = -459198.753440
+	 - after brlen: logLH = -459192.391436
+Iteration 19: logLH = -459192.391436
+	 - after rates: logLH = -459192.391436
+	 - after freqs: logLH = -459192.391436
+	 - after alpha: logLH = -459188.856914
+	 - after p-inv: logLH = -459188.856914
+	 - after freeR: logLH = -459188.856914
+	 - after brlen: logLH = -459183.358710
+Iteration 20: logLH = -459183.358710
+[00:04:16 -459183.358710] AUTODETECT spr round 1 (radius: 5)
+[00:04:22 -372244.068941] AUTODETECT spr round 2 (radius: 10)
+[00:04:25 -372243.700569] AUTODETECT spr round 3 (radius: 15)
+[00:04:25 -372243.682109] SPR radius for FAST iterations: 10 (autodetect)
+[00:04:25 -372243.682109] Model parameter optimization (eps = 3.000000)
+	 - after rates: logLH = -372243.682109
+	 - after freqs: logLH = -372243.682109
+	 - after alpha: logLH = -368329.577599
+	 - after p-inv: logLH = -368329.577599
+	 - after freeR: logLH = -368329.577599
+	 - after brlen: logLH = -368147.683333
+Iteration 1: logLH = -368147.683333
+	 - after rates: logLH = -368147.683333
+	 - after freqs: logLH = -368147.683333
+	 - after alpha: logLH = -368145.516089
+	 - after p-inv: logLH = -368145.516089
+	 - after freeR: logLH = -368145.516089
+	 - after brlen: logLH = -368145.356988
+Iteration 2: logLH = -368145.356988
+[00:04:27 -368145.356988] FAST spr round 1 (radius: 10)
+	 - after brlen: logLH = -325928.726173
+[00:04:39 -325928.726173] FAST spr round 2 (radius: 10)
+	 - after brlen: logLH = -325589.616804
+[00:04:51 -325589.616804] FAST spr round 3 (radius: 10)
+	 - after brlen: logLH = -325589.614610
+[00:05:02 -325589.614610] Model parameter optimization (eps = 1.000000)
+	 - after rates: logLH = -325589.614610
+	 - after freqs: logLH = -325589.614610
+	 - after alpha: logLH = -325208.331586
+	 - after p-inv: logLH = -325208.331586
+	 - after freeR: logLH = -325208.331586
+	 - after brlen: logLH = -325198.242022
+Iteration 1: logLH = -325198.242022
+	 - after rates: logLH = -325198.242022
+	 - after freqs: logLH = -325198.242022
+	 - after alpha: logLH = -325198.117176
+	 - after p-inv: logLH = -325198.117176
+	 - after freeR: logLH = -325198.117176
+	 - after brlen: logLH = -325198.091448
+Iteration 2: logLH = -325198.091448
+[00:05:03 -325198.091448] SLOW spr round 1 (radius: 5)
+[00:05:13] [worker #1] ML tree search #8, logLikelihood: -325198.031322
+	 - after brlen: logLH = -325198.089471
+[00:05:24 -325198.089471] SLOW spr round 2 (radius: 10)
+[00:05:36] [worker #2] ML tree search #9, logLikelihood: -325197.989430
+	 - after brlen: logLH = -325198.088239
+[00:05:39 -325198.088239] SLOW spr round 3 (radius: 15)
+	 - after brlen: logLH = -325198.087008
+[00:05:40 -325198.087008] Model parameter optimization (eps = 0.100000)
+	 - after rates: logLH = -325198.087008
+	 - after freqs: logLH = -325198.087008
+	 - after alpha: logLH = -325198.087008
+	 - after p-inv: logLH = -325198.087008
+	 - after freeR: logLH = -325198.087008
+	 - after brlen: logLH = -325198.086393
+Iteration 1: logLH = -325198.086393
+
+[00:05:41] [worker #0] ML tree search #7, logLikelihood: -325198.086393
+
+[00:05:41 -479259.888169] Initial branch length optimization
+	 - after brlen: logLH = -387629.516787
+[00:05:42 -387629.516787] Model parameter optimization (eps = 10.000000)
+	 - after rates: logLH = -387629.516787
+	 - after freqs: logLH = -387629.516787
+	 - after alpha: logLH = -386649.859517
+	 - after p-inv: logLH = -386649.859517
+	 - after freeR: logLH = -386649.859517
+	 - after brlen: logLH = -385848.034738
+Iteration 1: logLH = -385848.034738
+	 - after rates: logLH = -385848.034738
+	 - after freqs: logLH = -385848.034738
+	 - after alpha: logLH = -385325.907967
+	 - after p-inv: logLH = -385325.907967
+	 - after freeR: logLH = -385325.907967
+	 - after brlen: logLH = -384892.174785
+Iteration 2: logLH = -384892.174785
+	 - after rates: logLH = -384892.174785
+	 - after freqs: logLH = -384892.174785
+	 - after alpha: logLH = -384578.852420
+	 - after p-inv: logLH = -384578.852420
+	 - after freeR: logLH = -384578.852420
+	 - after brlen: logLH = -384326.102682
+Iteration 3: logLH = -384326.102682
+	 - after rates: logLH = -384326.102682
+	 - after freqs: logLH = -384326.102682
+	 - after alpha: logLH = -384128.557647
+	 - after p-inv: logLH = -384128.557647
+	 - after freeR: logLH = -384128.557647
+	 - after brlen: logLH = -383973.641619
+Iteration 4: logLH = -383973.641619
+	 - after rates: logLH = -383973.641619
+	 - after freqs: logLH = -383973.641619
+	 - after alpha: logLH = -383844.566394
+	 - after p-inv: logLH = -383844.566394
+	 - after freeR: logLH = -383844.566394
+	 - after brlen: logLH = -383742.977472
+Iteration 5: logLH = -383742.977472
+	 - after rates: logLH = -383742.977472
+	 - after freqs: logLH = -383742.977472
+	 - after alpha: logLH = -383661.310186
+	 - after p-inv: logLH = -383661.310186
+	 - after freeR: logLH = -383661.310186
+	 - after brlen: logLH = -383590.484466
+Iteration 6: logLH = -383590.484466
+	 - after rates: logLH = -383590.484466
+	 - after freqs: logLH = -383590.484466
+	 - after alpha: logLH = -383532.187484
+	 - after p-inv: logLH = -383532.187484
+	 - after freeR: logLH = -383532.187484
+	 - after brlen: logLH = -383481.431129
+Iteration 7: logLH = -383481.431129
+	 - after rates: logLH = -383481.431129
+	 - after freqs: logLH = -383481.431129
+	 - after alpha: logLH = -383438.780126
+	 - after p-inv: logLH = -383438.780126
+	 - after freeR: logLH = -383438.780126
+	 - after brlen: logLH = -383401.391581
+Iteration 8: logLH = -383401.391581
+	 - after rates: logLH = -383401.391581
+	 - after freqs: logLH = -383401.391581
+	 - after alpha: logLH = -383369.502429
+	 - after p-inv: logLH = -383369.502429
+	 - after freeR: logLH = -383369.502429
+	 - after brlen: logLH = -383341.857299
+Iteration 9: logLH = -383341.857299
+	 - after rates: logLH = -383341.857299
+	 - after freqs: logLH = -383341.857299
+	 - after alpha: logLH = -383317.487185
+	 - after p-inv: logLH = -383317.487185
+	 - after freeR: logLH = -383317.487185
+	 - after brlen: logLH = -383296.079451
+Iteration 10: logLH = -383296.079451
+	 - after rates: logLH = -383296.079451
+	 - after freqs: logLH = -383296.079451
+	 - after alpha: logLH = -383277.198611
+	 - after p-inv: logLH = -383277.198611
+	 - after freeR: logLH = -383277.198611
+	 - after brlen: logLH = -383260.779153
+Iteration 11: logLH = -383260.779153
+	 - after rates: logLH = -383260.779153
+	 - after freqs: logLH = -383260.779153
+	 - after alpha: logLH = -383245.918113
+	 - after p-inv: logLH = -383245.918113
+	 - after freeR: logLH = -383245.918113
+	 - after brlen: logLH = -383233.038831
+Iteration 12: logLH = -383233.038831
+	 - after rates: logLH = -383233.038831
+	 - after freqs: logLH = -383233.038831
+	 - after alpha: logLH = -383221.199528
+	 - after p-inv: logLH = -383221.199528
+	 - after freeR: logLH = -383221.199528
+	 - after brlen: logLH = -383210.403693
+Iteration 13: logLH = -383210.403693
+	 - after rates: logLH = -383210.403693
+	 - after freqs: logLH = -383210.403693
+	 - after alpha: logLH = -383200.946629
+	 - after p-inv: logLH = -383200.946629
+	 - after freeR: logLH = -383200.946629
+	 - after brlen: logLH = -383192.864205
+Iteration 14: logLH = -383192.864205
+	 - after rates: logLH = -383192.864205
+	 - after freqs: logLH = -383192.864205
+	 - after alpha: logLH = -383187.589462
+	 - after p-inv: logLH = -383187.589462
+	 - after freeR: logLH = -383187.589462
+	 - after brlen: logLH = -383180.197608
+Iteration 15: logLH = -383180.197608
+	 - after rates: logLH = -383180.197608
+	 - after freqs: logLH = -383180.197608
+	 - after alpha: logLH = -383175.613819
+	 - after p-inv: logLH = -383175.613819
+	 - after freeR: logLH = -383175.613819
+	 - after brlen: logLH = -383171.932005
+Iteration 16: logLH = -383171.932005
+[00:05:54 -383171.932005] AUTODETECT spr round 1 (radius: 5)
+[00:06:00 -327486.605091] AUTODETECT spr round 2 (radius: 10)
+[00:06:02 -327486.567459] SPR radius for FAST iterations: 5 (autodetect)
+[00:06:02 -327486.567459] Model parameter optimization (eps = 3.000000)
+	 - after rates: logLH = -327486.567459
+	 - after freqs: logLH = -327486.567459
+	 - after alpha: logLH = -325701.453290
+	 - after p-inv: logLH = -325701.453290
+	 - after freeR: logLH = -325701.453290
+	 - after brlen: logLH = -325590.560992
+Iteration 1: logLH = -325590.560992
+	 - after rates: logLH = -325590.560992
+	 - after freqs: logLH = -325590.560992
+	 - after alpha: logLH = -325588.526452
+	 - after p-inv: logLH = -325588.526452
+	 - after freeR: logLH = -325588.526452
+	 - after brlen: logLH = -325588.480356
+Iteration 2: logLH = -325588.480356
+[00:06:03 -325588.480356] FAST spr round 1 (radius: 5)
+	 - after brlen: logLH = -325427.024859
+[00:06:15 -325427.024859] FAST spr round 2 (radius: 5)
+[00:06:22] [worker #1] ML tree search #11, logLikelihood: -325198.076383
+	 - after brlen: logLH = -325335.558831
+[00:06:27 -325335.558831] FAST spr round 3 (radius: 5)
+	 - after brlen: logLH = -325198.101505
+[00:06:38 -325198.101505] FAST spr round 4 (radius: 5)
+[00:06:45] [worker #2] ML tree search #12, logLikelihood: -325197.948513
+	 - after brlen: logLH = -325197.969250
+[00:06:49 -325197.969250] Model parameter optimization (eps = 1.000000)
+	 - after rates: logLH = -325197.969250
+	 - after freqs: logLH = -325197.969250
+	 - after alpha: logLH = -325197.969250
+	 - after p-inv: logLH = -325197.969250
+	 - after freeR: logLH = -325197.969250
+	 - after brlen: logLH = -325197.968561
+Iteration 1: logLH = -325197.968561
+[00:06:49 -325197.968561] SLOW spr round 1 (radius: 5)
+	 - after brlen: logLH = -325197.950009
+[00:07:11 -325197.950009] SLOW spr round 2 (radius: 10)
+	 - after brlen: logLH = -325197.949240
+[00:07:26 -325197.949240] SLOW spr round 3 (radius: 15)
+[00:07:26] [worker #1] ML tree search #14, logLikelihood: -325198.092322
+	 - after brlen: logLH = -325197.948474
+[00:07:26 -325197.948474] Model parameter optimization (eps = 0.100000)
+	 - after rates: logLH = -325197.948474
+	 - after freqs: logLH = -325197.948474
+	 - after alpha: logLH = -325197.948474
+	 - after p-inv: logLH = -325197.948474
+	 - after freeR: logLH = -325197.948474
+	 - after brlen: logLH = -325197.948092
+Iteration 1: logLH = -325197.948092
+
+[00:07:27] [worker #0] ML tree search #10, logLikelihood: -325197.948092
+
+[00:07:27 -389946.662826] Initial branch length optimization
+	 - after brlen: logLH = -326727.955928
+[00:07:27 -326727.955928] Model parameter optimization (eps = 10.000000)
+	 - after rates: logLH = -326727.955928
+	 - after freqs: logLH = -326727.955928
+	 - after alpha: logLH = -326538.642217
+	 - after p-inv: logLH = -326538.642217
+	 - after freeR: logLH = -326538.642217
+	 - after brlen: logLH = -326376.953421
+Iteration 1: logLH = -326376.953421
+	 - after rates: logLH = -326376.953421
+	 - after freqs: logLH = -326376.953421
+	 - after alpha: logLH = -326259.050975
+	 - after p-inv: logLH = -326259.050975
+	 - after freeR: logLH = -326259.050975
+	 - after brlen: logLH = -326154.601842
+Iteration 2: logLH = -326154.601842
+	 - after rates: logLH = -326154.601842
+	 - after freqs: logLH = -326154.601842
+	 - after alpha: logLH = -326076.647442
+	 - after p-inv: logLH = -326076.647442
+	 - after freeR: logLH = -326076.647442
+	 - after brlen: logLH = -326006.735565
+Iteration 3: logLH = -326006.735565
+	 - after rates: logLH = -326006.735565
+	 - after freqs: logLH = -326006.735565
+	 - after alpha: logLH = -325953.096075
+	 - after p-inv: logLH = -325953.096075
+	 - after freeR: logLH = -325953.096075
+	 - after brlen: logLH = -325903.795133
+Iteration 4: logLH = -325903.795133
+	 - after rates: logLH = -325903.795133
+	 - after freqs: logLH = -325903.795133
+	 - after alpha: logLH = -325865.475867
+	 - after p-inv: logLH = -325865.475867
+	 - after freeR: logLH = -325865.475867
+	 - after brlen: logLH = -325829.844449
+Iteration 5: logLH = -325829.844449
+	 - after rates: logLH = -325829.844449
+	 - after freqs: logLH = -325829.844449
+	 - after alpha: logLH = -325801.345113
+	 - after p-inv: logLH = -325801.345113
+	 - after freeR: logLH = -325801.345113
+	 - after brlen: logLH = -325774.615033
+Iteration 6: logLH = -325774.615033
+	 - after rates: logLH = -325774.615033
+	 - after freqs: logLH = -325774.615033
+	 - after alpha: logLH = -325752.683725
+	 - after p-inv: logLH = -325752.683725
+	 - after freeR: logLH = -325752.683725
+	 - after brlen: logLH = -325732.012997
+Iteration 7: logLH = -325732.012997
+	 - after rates: logLH = -325732.012997
+	 - after freqs: logLH = -325732.012997
+	 - after alpha: logLH = -325714.696020
+	 - after p-inv: logLH = -325714.696020
+	 - after freeR: logLH = -325714.696020
+	 - after brlen: logLH = -325698.342447
+Iteration 8: logLH = -325698.342447
+	 - after rates: logLH = -325698.342447
+	 - after freqs: logLH = -325698.342447
+	 - after alpha: logLH = -325684.413695
+	 - after p-inv: logLH = -325684.413695
+	 - after freeR: logLH = -325684.413695
+	 - after brlen: logLH = -325671.257259
+Iteration 9: logLH = -325671.257259
+	 - after rates: logLH = -325671.257259
+	 - after freqs: logLH = -325671.257259
+	 - after alpha: logLH = -325659.903505
+	 - after p-inv: logLH = -325659.903505
+	 - after freeR: logLH = -325659.903505
+	 - after brlen: logLH = -325649.186229
+Iteration 10: logLH = -325649.186229
+	 - after rates: logLH = -325649.186229
+	 - after freqs: logLH = -325649.186229
+	 - after alpha: logLH = -325639.839229
+	 - after p-inv: logLH = -325639.839229
+	 - after freeR: logLH = -325639.839229
+	 - after brlen: logLH = -325631.049106
+Iteration 11: logLH = -325631.049106
+	 - after rates: logLH = -325631.049106
+	 - after freqs: logLH = -325631.049106
+	 - after alpha: logLH = -325623.284319
+	 - after p-inv: logLH = -325623.284319
+	 - after freeR: logLH = -325623.284319
+	 - after brlen: logLH = -325616.109302
+Iteration 12: logLH = -325616.109302
+	 - after rates: logLH = -325616.109302
+	 - after freqs: logLH = -325616.109302
+	 - after alpha: logLH = -325609.621566
+	 - after p-inv: logLH = -325609.621566
+	 - after freeR: logLH = -325609.621566
+	 - after brlen: logLH = -325603.636823
+Iteration 13: logLH = -325603.636823
+	 - after rates: logLH = -325603.636823
+	 - after freqs: logLH = -325603.636823
+	 - after alpha: logLH = -325598.181651
+	 - after p-inv: logLH = -325598.181651
+	 - after freeR: logLH = -325598.181651
+	 - after brlen: logLH = -325592.822381
+Iteration 14: logLH = -325592.822381
+	 - after rates: logLH = -325592.822381
+	 - after freqs: logLH = -325592.822381
+	 - after alpha: logLH = -325588.237890
+	 - after p-inv: logLH = -325588.237890
+	 - after freeR: logLH = -325588.237890
+	 - after brlen: logLH = -325584.021543
+Iteration 15: logLH = -325584.021543
+[00:07:38 -325584.021543] AUTODETECT spr round 1 (radius: 5)
+[00:07:43 -325483.206306] AUTODETECT spr round 2 (radius: 10)
+[00:07:45 -325483.175491] SPR radius for FAST iterations: 5 (autodetect)
+[00:07:45 -325483.175491] Model parameter optimization (eps = 3.000000)
+	 - after rates: logLH = -325483.175491
+	 - after freqs: logLH = -325483.175491
+	 - after alpha: logLH = -325478.764614
+	 - after p-inv: logLH = -325478.764614
+	 - after freeR: logLH = -325478.764614
+	 - after brlen: logLH = -325474.713440
+Iteration 1: logLH = -325474.713440
+	 - after rates: logLH = -325474.713440
+	 - after freqs: logLH = -325474.713440
+	 - after alpha: logLH = -325470.975236
+	 - after p-inv: logLH = -325470.975236
+	 - after freeR: logLH = -325470.975236
+	 - after brlen: logLH = -325469.844845
+Iteration 2: logLH = -325469.844845
+	 - after rates: logLH = -325469.844845
+	 - after freqs: logLH = -325469.844845
+	 - after alpha: logLH = -325469.724967
+	 - after p-inv: logLH = -325469.724967
+	 - after freeR: logLH = -325469.724967
+	 - after brlen: logLH = -325469.719343
+Iteration 3: logLH = -325469.719343
+[00:07:47 -325469.719343] FAST spr round 1 (radius: 5)
+[00:07:54] [worker #2] ML tree search #15, logLikelihood: -325197.958284
+	 - after brlen: logLH = -325198.099060
+[00:07:57 -325198.099060] FAST spr round 2 (radius: 5)
+	 - after brlen: logLH = -325198.096471
+[00:08:07 -325198.096471] Model parameter optimization (eps = 1.000000)
+	 - after rates: logLH = -325198.096471
+	 - after freqs: logLH = -325198.096471
+	 - after alpha: logLH = -325198.088038
+	 - after p-inv: logLH = -325198.088038
+	 - after freeR: logLH = -325198.088038
+	 - after brlen: logLH = -325198.087163
+Iteration 1: logLH = -325198.087163
+[00:08:08 -325198.087163] SLOW spr round 1 (radius: 5)
+	 - after brlen: logLH = -325198.085927
+[00:08:28 -325198.085927] SLOW spr round 2 (radius: 10)
+[00:08:42] [worker #1] ML tree search #17, logLikelihood: -325197.956107
+	 - after brlen: logLH = -325198.084709
+[00:08:43 -325198.084709] SLOW spr round 3 (radius: 15)
+	 - after brlen: logLH = -325198.083490
+[00:08:44 -325198.083490] Model parameter optimization (eps = 0.100000)
+	 - after rates: logLH = -325198.083490
+	 - after freqs: logLH = -325198.083490
+	 - after alpha: logLH = -325198.083490
+	 - after p-inv: logLH = -325198.083490
+	 - after freeR: logLH = -325198.083490
+	 - after brlen: logLH = -325198.082882
+Iteration 1: logLH = -325198.082882
+
+[00:08:44] [worker #0] ML tree search #13, logLikelihood: -325198.082882
+
+[00:08:44 -390125.869160] Initial branch length optimization
+	 - after brlen: logLH = -326836.424804
+[00:08:45 -326836.424804] Model parameter optimization (eps = 10.000000)
+	 - after rates: logLH = -326836.424804
+	 - after freqs: logLH = -326836.424804
+	 - after alpha: logLH = -326635.588696
+	 - after p-inv: logLH = -326635.588696
+	 - after freeR: logLH = -326635.588696
+	 - after brlen: logLH = -326464.035294
+Iteration 1: logLH = -326464.035294
+	 - after rates: logLH = -326464.035294
+	 - after freqs: logLH = -326464.035294
+	 - after alpha: logLH = -326338.910749
+	 - after p-inv: logLH = -326338.910749
+	 - after freeR: logLH = -326338.910749
+	 - after brlen: logLH = -326227.821809
+Iteration 2: logLH = -326227.821809
+	 - after rates: logLH = -326227.821809
+	 - after freqs: logLH = -326227.821809
+	 - after alpha: logLH = -326144.974132
+	 - after p-inv: logLH = -326144.974132
+	 - after freeR: logLH = -326144.974132
+	 - after brlen: logLH = -326070.411824
+Iteration 3: logLH = -326070.411824
+	 - after rates: logLH = -326070.411824
+	 - after freqs: logLH = -326070.411824
+	 - after alpha: logLH = -326013.329619
+	 - after p-inv: logLH = -326013.329619
+	 - after freeR: logLH = -326013.329619
+	 - after brlen: logLH = -325960.676889
+Iteration 4: logLH = -325960.676889
+	 - after rates: logLH = -325960.676889
+	 - after freqs: logLH = -325960.676889
+	 - after alpha: logLH = -325919.784098
+	 - after p-inv: logLH = -325919.784098
+	 - after freeR: logLH = -325919.784098
+	 - after brlen: logLH = -325881.599833
+Iteration 5: logLH = -325881.599833
+	 - after rates: logLH = -325881.599833
+	 - after freqs: logLH = -325881.599833
+	 - after alpha: logLH = -325851.075653
+	 - after p-inv: logLH = -325851.075653
+	 - after freeR: logLH = -325851.075653
+	 - after brlen: logLH = -325822.340900
+Iteration 6: logLH = -325822.340900
+	 - after rates: logLH = -325822.340900
+	 - after freqs: logLH = -325822.340900
+	 - after alpha: logLH = -325798.772450
+	 - after p-inv: logLH = -325798.772450
+	 - after freeR: logLH = -325798.772450
+	 - after brlen: logLH = -325776.498589
+Iteration 7: logLH = -325776.498589
+	 - after rates: logLH = -325776.498589
+	 - after freqs: logLH = -325776.498589
+	 - after alpha: logLH = -325757.844439
+	 - after p-inv: logLH = -325757.844439
+	 - after freeR: logLH = -325757.844439
+	 - after brlen: logLH = -325740.197739
+Iteration 8: logLH = -325740.197739
+	 - after rates: logLH = -325740.197739
+	 - after freqs: logLH = -325740.197739
+	 - after alpha: logLH = -325725.172851
+	 - after p-inv: logLH = -325725.172851
+	 - after freeR: logLH = -325725.172851
+	 - after brlen: logLH = -325710.967467
+Iteration 9: logLH = -325710.967467
+	 - after rates: logLH = -325710.967467
+	 - after freqs: logLH = -325710.967467
+	 - after alpha: logLH = -325698.712752
+	 - after p-inv: logLH = -325698.712752
+	 - after freeR: logLH = -325698.712752
+	 - after brlen: logLH = -325687.139947
+Iteration 10: logLH = -325687.139947
+	 - after rates: logLH = -325687.139947
+	 - after freqs: logLH = -325687.139947
+	 - after alpha: logLH = -325677.049837
+	 - after p-inv: logLH = -325677.049837
+	 - after freeR: logLH = -325677.049837
+	 - after brlen: logLH = -325667.564444
+Iteration 11: logLH = -325667.564444
+	 - after rates: logLH = -325667.564444
+	 - after freqs: logLH = -325667.564444
+	 - after alpha: logLH = -325659.165452
+	 - after p-inv: logLH = -325659.165452
+	 - after freeR: logLH = -325659.165452
+	 - after brlen: logLH = -325651.404824
+Iteration 12: logLH = -325651.404824
+	 - after rates: logLH = -325651.404824
+	 - after freqs: logLH = -325651.404824
+	 - after alpha: logLH = -325644.396807
+	 - after p-inv: logLH = -325644.396807
+	 - after freeR: logLH = -325644.396807
+	 - after brlen: logLH = -325637.927353
+Iteration 13: logLH = -325637.927353
+	 - after rates: logLH = -325637.927353
+	 - after freqs: logLH = -325637.927353
+	 - after alpha: logLH = -325632.035319
+	 - after p-inv: logLH = -325632.035319
+	 - after freeR: logLH = -325632.035319
+	 - after brlen: logLH = -325626.435968
+Iteration 14: logLH = -325626.435968
+	 - after rates: logLH = -325626.435968
+	 - after freqs: logLH = -325626.435968
+	 - after alpha: logLH = -325621.473415
+	 - after p-inv: logLH = -325621.473415
+	 - after freeR: logLH = -325621.473415
+	 - after brlen: logLH = -325617.050520
+Iteration 15: logLH = -325617.050520
+[00:08:54 -325617.050520] AUTODETECT spr round 1 (radius: 5)
+[00:08:56] [worker #2] ML tree search #18, logLikelihood: -325198.091451
+[00:08:58 -325200.263430] AUTODETECT spr round 2 (radius: 10)
+[00:09:00 -325200.208881] SPR radius for FAST iterations: 5 (autodetect)
+[00:09:00 -325200.208881] Model parameter optimization (eps = 3.000000)
+	 - after rates: logLH = -325200.208881
+	 - after freqs: logLH = -325200.208881
+	 - after alpha: logLH = -325198.146057
+	 - after p-inv: logLH = -325198.146057
+	 - after freeR: logLH = -325198.146057
+	 - after brlen: logLH = -325198.116047
+Iteration 1: logLH = -325198.116047
+[00:09:00 -325198.116047] FAST spr round 1 (radius: 5)
+	 - after brlen: logLH = -325198.112383
+[00:09:08 -325198.112383] Model parameter optimization (eps = 1.000000)
+	 - after rates: logLH = -325198.112383
+	 - after freqs: logLH = -325198.112383
+	 - after alpha: logLH = -325198.112383
+	 - after p-inv: logLH = -325198.112383
+	 - after freeR: logLH = -325198.112383
+	 - after brlen: logLH = -325198.111760
+Iteration 1: logLH = -325198.111760
+[00:09:09 -325198.111760] SLOW spr round 1 (radius: 5)
+	 - after brlen: logLH = -325198.110517
+[00:09:27 -325198.110517] SLOW spr round 2 (radius: 10)
+	 - after brlen: logLH = -325198.109276
+[00:09:39 -325198.109276] SLOW spr round 3 (radius: 15)
+	 - after brlen: logLH = -325198.108036
+[00:09:40 -325198.108036] Model parameter optimization (eps = 0.100000)
+	 - after rates: logLH = -325198.108036
+	 - after freqs: logLH = -325198.108036
+	 - after alpha: logLH = -325198.108036
+	 - after p-inv: logLH = -325198.108036
+	 - after freeR: logLH = -325198.108036
+	 - after brlen: logLH = -325198.107416
+Iteration 1: logLH = -325198.107416
+
+[00:09:40] [worker #0] ML tree search #16, logLikelihood: -325198.107416
+
+[00:09:40 -390189.389854] Initial branch length optimization
+	 - after brlen: logLH = -326821.096569
+[00:09:41 -326821.096569] Model parameter optimization (eps = 10.000000)
+	 - after rates: logLH = -326821.096569
+	 - after freqs: logLH = -326821.096569
+	 - after alpha: logLH = -326624.966282
+	 - after p-inv: logLH = -326624.966282
+	 - after freeR: logLH = -326624.966282
+	 - after brlen: logLH = -326457.826861
+Iteration 1: logLH = -326457.826861
+[00:09:42] [worker #1] ML tree search #20, logLikelihood: -325197.912388
+	 - after rates: logLH = -326457.826861
+	 - after freqs: logLH = -326457.826861
+	 - after alpha: logLH = -326335.235873
+	 - after p-inv: logLH = -326335.235873
+	 - after freeR: logLH = -326335.235873
+	 - after brlen: logLH = -326226.796127
+Iteration 2: logLH = -326226.796127
+	 - after rates: logLH = -326226.796127
+	 - after freqs: logLH = -326226.796127
+	 - after alpha: logLH = -326145.553508
+	 - after p-inv: logLH = -326145.553508
+	 - after freeR: logLH = -326145.553508
+	 - after brlen: logLH = -326072.736895
+Iteration 3: logLH = -326072.736895
+	 - after rates: logLH = -326072.736895
+	 - after freqs: logLH = -326072.736895
+	 - after alpha: logLH = -326016.756887
+	 - after p-inv: logLH = -326016.756887
+	 - after freeR: logLH = -326016.756887
+	 - after brlen: logLH = -325965.323325
+Iteration 4: logLH = -325965.323325
+	 - after rates: logLH = -325965.323325
+	 - after freqs: logLH = -325965.323325
+	 - after alpha: logLH = -325925.247688
+	 - after p-inv: logLH = -325925.247688
+	 - after freeR: logLH = -325925.247688
+	 - after brlen: logLH = -325887.974518
+Iteration 5: logLH = -325887.974518
+	 - after rates: logLH = -325887.974518
+	 - after freqs: logLH = -325887.974518
+	 - after alpha: logLH = -325858.091800
+	 - after p-inv: logLH = -325858.091800
+	 - after freeR: logLH = -325858.091800
+	 - after brlen: logLH = -325830.062453
+Iteration 6: logLH = -325830.062453
+	 - after rates: logLH = -325830.062453
+	 - after freqs: logLH = -325830.062453
+	 - after alpha: logLH = -325807.012839
+	 - after p-inv: logLH = -325807.012839
+	 - after freeR: logLH = -325807.012839
+	 - after brlen: logLH = -325785.297835
+Iteration 7: logLH = -325785.297835
+	 - after rates: logLH = -325785.297835
+	 - after freqs: logLH = -325785.297835
+	 - after alpha: logLH = -325767.068507
+	 - after p-inv: logLH = -325767.068507
+	 - after freeR: logLH = -325767.068507
+	 - after brlen: logLH = -325749.870457
+Iteration 8: logLH = -325749.870457
+	 - after rates: logLH = -325749.870457
+	 - after freqs: logLH = -325749.870457
+	 - after alpha: logLH = -325735.195396
+	 - after p-inv: logLH = -325735.195396
+	 - after freeR: logLH = -325735.195396
+	 - after brlen: logLH = -325721.353678
+Iteration 9: logLH = -325721.353678
+	 - after rates: logLH = -325721.353678
+	 - after freqs: logLH = -325721.353678
+	 - after alpha: logLH = -325709.388409
+	 - after p-inv: logLH = -325709.388409
+	 - after freeR: logLH = -325709.388409
+	 - after brlen: logLH = -325698.112973
+Iteration 10: logLH = -325698.112973
+	 - after rates: logLH = -325698.112973
+	 - after freqs: logLH = -325698.112973
+	 - after alpha: logLH = -325688.263608
+	 - after p-inv: logLH = -325688.263608
+	 - after freeR: logLH = -325688.263608
+	 - after brlen: logLH = -325679.000220
+Iteration 11: logLH = -325679.000220
+	 - after rates: logLH = -325679.000220
+	 - after freqs: logLH = -325679.000220
+	 - after alpha: logLH = -325670.840142
+	 - after p-inv: logLH = -325670.840142
+	 - after freeR: logLH = -325670.840142
+	 - after brlen: logLH = -325663.287988
+Iteration 12: logLH = -325663.287988
+	 - after rates: logLH = -325663.287988
+	 - after freqs: logLH = -325663.287988
+	 - after alpha: logLH = -325656.468722
+	 - after p-inv: logLH = -325656.468722
+	 - after freeR: logLH = -325656.468722
+	 - after brlen: logLH = -325650.172179
+Iteration 13: logLH = -325650.172179
+	 - after rates: logLH = -325650.172179
+	 - after freqs: logLH = -325650.172179
+	 - after alpha: logLH = -325644.437341
+	 - after p-inv: logLH = -325644.437341
+	 - after freeR: logLH = -325644.437341
+	 - after brlen: logLH = -325638.911774
+Iteration 14: logLH = -325638.911774
+	 - after rates: logLH = -325638.911774
+	 - after freqs: logLH = -325638.911774
+	 - after alpha: logLH = -325634.086481
+	 - after p-inv: logLH = -325634.086481
+	 - after freeR: logLH = -325634.086481
+	 - after brlen: logLH = -325629.645611
+Iteration 15: logLH = -325629.645611
+[00:09:49 -325629.645611] AUTODETECT spr round 1 (radius: 5)
+[00:09:52 -325203.841961] AUTODETECT spr round 2 (radius: 10)
+[00:09:55 -325203.733749] AUTODETECT spr round 3 (radius: 15)
+[00:09:55 -325203.729463] SPR radius for FAST iterations: 10 (autodetect)
+[00:09:55 -325203.729463] Model parameter optimization (eps = 3.000000)
+	 - after rates: logLH = -325203.729463
+	 - after freqs: logLH = -325203.729463
+	 - after alpha: logLH = -325200.557761
+	 - after p-inv: logLH = -325200.557761
+	 - after freeR: logLH = -325200.557761
+	 - after brlen: logLH = -325198.633687
+Iteration 1: logLH = -325198.633687
+	 - after rates: logLH = -325198.633687
+	 - after freqs: logLH = -325198.633687
+	 - after alpha: logLH = -325198.139958
+	 - after p-inv: logLH = -325198.139958
+	 - after freeR: logLH = -325198.139958
+	 - after brlen: logLH = -325198.130723
+Iteration 2: logLH = -325198.130723
+[00:09:56 -325198.130723] FAST spr round 1 (radius: 10)
+	 - after brlen: logLH = -325197.950372
+[00:10:03 -325197.950372] Model parameter optimization (eps = 1.000000)
+	 - after rates: logLH = -325197.950372
+	 - after freqs: logLH = -325197.950372
+	 - after alpha: logLH = -325197.950372
+	 - after p-inv: logLH = -325197.950372
+	 - after freeR: logLH = -325197.950372
+	 - after brlen: logLH = -325197.949680
+Iteration 1: logLH = -325197.949680
+[00:10:04 -325197.949680] SLOW spr round 1 (radius: 5)
+	 - after brlen: logLH = -325197.948910
+[00:10:20 -325197.948910] SLOW spr round 2 (radius: 10)
+	 - after brlen: logLH = -325197.948144
+[00:10:32 -325197.948144] SLOW spr round 3 (radius: 15)
+	 - after brlen: logLH = -325197.947378
+[00:10:32 -325197.947378] Model parameter optimization (eps = 0.100000)
+	 - after rates: logLH = -325197.947378
+	 - after freqs: logLH = -325197.947378
+	 - after alpha: logLH = -325197.947378
+	 - after p-inv: logLH = -325197.947378
+	 - after freeR: logLH = -325197.947378
+	 - after brlen: logLH = -325197.946996
+Iteration 1: logLH = -325197.946996
+
+[00:10:32] [worker #0] ML tree search #19, logLikelihood: -325197.946996
+
+
+Optimized model parameters:
+
+   Partition 0: noname
+   Rate heterogeneity: GAMMA (4 cats, mean),  alpha: 0.352490 (ML),  weights&rates: (0.250000,0.010499) (0.250000,0.145490) (0.250000,0.674292) (0.250000,3.169719) 
+   Base frequencies (empirical): 0.069903 0.041490 0.053331 0.062141 0.013727 0.034410 0.068079 0.064311 0.020047 0.060830 0.079044 0.080115 0.028674 0.042072 0.029529 0.064576 0.062051 0.011735 0.043487 0.070451 
+   Substitution rates (model): 1.241269 1.218424 1.375937 2.473122 2.215517 2.337991 3.338656 0.961584 0.890820 1.077850 1.493206 1.900646 0.688344 2.735562 6.420896 5.289251 0.548858 0.541177 4.650189 1.572077 0.755065 1.441426 5.512082 1.354240 1.312170 4.923867 0.432301 0.838670 10.017331 1.248864 0.422495 1.309184 1.920299 1.336340 1.517014 0.891261 0.780702 7.858422 0.978468 3.014320 2.009343 2.411763 6.197438 0.917929 0.409831 4.403455 0.937880 0.504494 0.710372 6.123451 3.885251 0.180853 1.089493 0.458606 0.227249 1.656250 9.688345 1.914208 2.145964 0.216166 0.357421 1.452179 0.407524 0.167513 1.071461 2.216194 1.506684 0.249658 0.744762 0.459454 0.458747 0.451917 1.103461 1.519676 0.912667 1.408132 0.337109 1.221305 1.695395 0.432623 3.636682 1.755707 1.627518 2.157978 2.262746 6.812460 0.877611 7.994323 0.488273 1.331810 6.051909 1.910619 0.357343 2.301918 2.319370 2.157651 0.895908 0.918360 0.636693 1.386012 1.636008 0.403550 0.561072 4.329009 0.747194 0.231719 1.513281 1.827354 1.583998 0.419839 0.581811 0.894057 0.856125 0.288808 0.357866 0.894556 0.595481 0.369372 0.774493 3.063778 0.714749 0.934975 0.337447 0.619332 0.578794 1.076501 1.808514 1.380829 1.362977 1.837056 1.969990 1.613665 0.630195 7.758744 0.533322 6.001911 0.624430 6.759790 2.286429 0.481140 0.604749 2.634478 0.560465 0.862680 14.872933 0.564232 8.032779 4.361155 1.008432 0.895375 1.019200 1.518311 1.245224 3.545809 1.712967 0.391056 1.391894 1.977663 2.551378 0.585192 0.783545 0.780108 2.320137 0.495319 1.065748 3.362849 1.468048 1.089917 4.058458 0.374682 1.107914 0.688273 3.344844 10.384852 1.703973 3.546591 1.948538 0.432606 0.481911 0.598550 8.847998 0.679113 0.954723 0.930523 0.451420 0.856431 3.424222 4.537724 0.565897 1.000000 
+
+
+Final LogLikelihood: -325197.847147
+
+AIC score: 650493.694293 / AICc score: 650493.801646 / BIC score: 650921.450685
+Free parameters (model + branch lengths): 49
+
+WARNING: Best ML tree contains 1 near-zero branches!
+
+Best ML tree with collapsed near-zero branches saved to: /home/izclip/doccano/phylogenetic-tree-reconstruction/T1.raxml.bestTreeCollapsed
+Best ML tree saved to: /home/izclip/doccano/phylogenetic-tree-reconstruction/T1.raxml.bestTree
+All ML trees saved to: /home/izclip/doccano/phylogenetic-tree-reconstruction/T1.raxml.mlTrees
+Optimized model saved to: /home/izclip/doccano/phylogenetic-tree-reconstruction/T1.raxml.bestModel
+
+Execution log saved to: /home/izclip/doccano/phylogenetic-tree-reconstruction/T1.raxml.log
+
+Analysis started: 09-May-2024 12:49:45 / finished: 09-May-2024 13:00:18
+
+Elapsed time: 632.891 seconds
+
